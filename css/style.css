@@ -507,16 +507,16 @@ button {
     padding-bottom: 90px;
 }
 .our_text{
-    width: 100%;
-    float: left;
+    width: 80%;
+    float: center;
     font-size: 36px;
     color: #121111;
-    text-transform: uppercase;
+    text-transform: lowercase;
     text-align: center;
 }
 .ipsum_text{
     width: 100%;
-    float: left;
+    float: center;
     font-size: 16px;
     color: #090808;
     text-align: center;
@@ -1399,7 +1399,7 @@ body.site-shell .who_section .container {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
     border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: var(--theme-shadow);
-    padding: 56px;
+    padding: 0px;
     margin-top: 50px;
 }
 
@@ -2696,8 +2696,9 @@ body.site-shell .contact_text,
 body.site-shell .services_taital,
 body.site-shell .who_taital {
     width: auto;
-    margin: 0 0 16px;
-    padding: 0;
+    margin: 0 0 0px;
+    padding: 5px;
+    padding-left:8px;
     color: var(--furni-ink);
     font-size: clamp(38px, 3.1vw, 46px);
     font-weight: 500;
@@ -2737,9 +2738,9 @@ body.site-shell .dololr_text,
 body.site-shell .footer_lorem_text,
 body.site-shell .footer_lorem_text1 {
     width: auto;
-    margin: 0;
+    margin: 10px;
     color: var(--furni-muted);
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.85;
     text-align: left;
 }
