@@ -370,3 +370,24 @@ $(function () {
 
 
 });
+
+/* Contact enquiry: front-end only; never claims to submit to a server. */
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('optimesh-contact-form');
+  if (!form) return;
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+    var data = new FormData(form);
+    var subject = encodeURIComponent('Optimesh Innovations product enquiry');
+    var body = encodeURIComponent(
+      'Name: ' + (data.get('name') || '') + '\n' +
+      'Email: ' + (data.get('email') || '') + '\n' +
+      'Phone: ' + (data.get('phone') || '') + '\n\n' +
+      'Message:\n' + (data.get('message') || '')
+    );
+    var note = form.querySelector('.form-note');
+    if (note) note.textContent = 'Your email app will open. Please add the Optimesh recipient address and press Send; this website does not send messages directly.';
+    window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+  });
+});
