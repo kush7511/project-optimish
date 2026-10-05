@@ -391,3 +391,9 @@ document.addEventListener('DOMContentLoaded', function () {
     window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
   });
 });
+
+/* Premium navigation/accessibility enhancements. Existing plugin behavior is preserved. */
+$(function(){
+  $('a[href]').on('click',function(){ $(this).blur(); });
+  $(document).on('keydown',function(e){ if(e.key==='Escape') $('.navbar-collapse.show').collapse('hide'); });
+});
