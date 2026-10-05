@@ -599,3 +599,81 @@ a {
     gap: 10px;
   }
 }
+
+
+/* Shared 2026 business refresh for the existing multi-page site.
+   Original product pages, assets, filenames and legacy component styles are retained. */
+body.site-shell {
+  --om-green: #284d42;
+  --om-green-light: #3b6657;
+  --om-gold: #e9b85a;
+  --om-cream: #f7f5ef;
+  --om-ink: #202c28;
+  color: var(--om-ink);
+  background: #fff;
+  font-family: 'Manrope', 'Poppins', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.site-shell .header_section { background: var(--om-green); }
+.site-shell .header_section > .container { max-width: 1240px; }
+.site-shell .navbar.bg-light { background: transparent !important; padding: 18px 0; }
+.site-shell .navbar .logo img { max-width: 190px; max-height: 85px; width: auto; object-fit: contain; }
+.site-shell .navbar-nav { align-items: center; gap: 9px; }
+.site-shell .navbar-nav .nav-link {
+  color: #fff !important; font-weight: 700; letter-spacing: .015em;
+  padding: 10px 16px !important; border-radius: 7px; transition: background .2s;
+}
+.site-shell .navbar-nav .nav-link:hover,
+.site-shell .navbar-nav .nav-link:focus-visible,
+.site-shell .navbar-nav .nav-link.active { background: rgba(255,255,255,.16); color: #fff !important; }
+.site-shell .navbar-toggler { background: #fff; border-radius: 7px; }
+.site-shell .banner_section {
+  background: linear-gradient(115deg, rgba(23,59,46,.96),rgba(43,89,70,.9));
+  padding: 76px 0 96px; min-height: 450px;
+}
+.site-shell .banner_section .carousel-inner { min-height: 300px; }
+.site-shell .banner_section .hero_copy { max-width: 790px; margin: auto; text-align: center; }
+.site-shell .banner_section .furniture_text {
+  color: #fff; font-family: 'Manrope',sans-serif; font-size: clamp(35px,5.2vw,68px);
+  line-height: 1.14; font-weight: 800; letter-spacing: -.045em; margin: 12px 0 24px;
+}
+.site-shell .banner_section .there_text { color: #e3efe8; font-size: clamp(15px,1.7vw,20px); line-height: 1.7; }
+.site-shell .contact_bt_main { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
+.site-shell .contact_bt { float: none; margin: 0; }
+.site-shell .contact_bt a, .site-shell .send_bt button {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-height: 49px; padding: 12px 27px; border-radius: 7px;
+  border: 2px solid var(--om-gold); background: var(--om-gold); color: #20382f !important;
+  font-weight: 800; cursor: pointer; transition: transform .2s, background .2s;
+}
+.site-shell .contact_bt a:hover, .site-shell .send_bt button:hover { transform: translateY(-2px); background: #f6ca7b; }
+.site-shell .contact_bt_secondary a { background: transparent; color: #fff !important; border-color: rgba(255,255,255,.8); }
+.site-shell .contact_bt_secondary a:hover { background: rgba(255,255,255,.15); }
+.site-shell .about_section, .site-shell .furnitures_section, .site-shell .who_section,
+.site-shell .contact_section { padding-top: 75px; padding-bottom: 75px; }
+.site-shell .about_text, .site-shell .furnitures_text, .site-shell .who_taital, .site-shell .contact_text {
+  color: var(--om-green); font-family: 'Manrope',sans-serif; font-weight: 800;
+  letter-spacing: -.025em;
+}
+.site-shell .furnitures_section { background: var(--om-cream); }
+.site-shell .furnitures_img img, .site-shell .about_img img { border-radius: 12px; }
+.site-shell .footer_section { background: #203e34; padding: 60px 0 42px; }
+.site-shell .footer_section a { color: #f1eee4 !important; }
+.site-shell .footer_section a:hover { color: var(--om-gold) !important; }
+.site-shell .copyright_section { background: #173027; }
+.site-shell .mail_sectin { display: flex; flex-direction: column; gap: 15px; }
+.site-shell .mail_sectin input, .site-shell .mail_sectin textarea {
+  width: 100%; border: 1px solid #cddbd4; border-radius: 7px;
+  background: #fff; padding: 13px 17px; font: inherit;
+}
+.site-shell .mail_sectin :focus-visible { outline: 3px solid #e9b85a; outline-offset: 2px; }
+.site-shell .send_bt { float: none; width: auto; margin: 0; }
+.site-shell .form-note { color: #52665c; font-size: 13px; line-height: 1.5; }
+.site-shell .map-responsive iframe { max-width: 100%; border-radius: 10px; }
+@media(max-width: 767px) {
+  .site-shell .navbar-nav { align-items: stretch; gap: 0; padding: 15px 0; }
+  .site-shell .banner_section { padding: 45px 0 70px; min-height: 360px; }
+  .site-shell .banner_section .carousel-inner { min-height: 250px; }
+  .site-shell .about_section, .site-shell .furnitures_section,
+  .site-shell .who_section, .site-shell .contact_section { padding: 45px 0; }
+}
